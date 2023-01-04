@@ -1,5 +1,6 @@
 package web.dao;
 import web.entity.User;
+import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
@@ -14,6 +15,9 @@ public interface UserDao {
     void update(User user);
 
     void delete(Long id);
+    
+    @Query()
+    List<User> asdasd(Long id);
 
 }
 
